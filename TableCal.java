@@ -49,7 +49,7 @@ class TableCal implements ActionListener
 		pnl2.setLayout(new FlowLayout());
 		btn=new JButton("GENERATE");
 		pnl2.add(btn);
-		btn.setPreferredSize(new Dimension(200, 200));
+		btn.setPreferredSize(new Dimension(200, 50));
 		btn.addActionListener(this);
 		con.add(pnl,BorderLayout.NORTH);
 		con.add(pnl2,BorderLayout.CENTER);
@@ -75,9 +75,9 @@ class TableCal implements ActionListener
 		int b=Integer.parseInt(txt2.getText());
 		for(int i=1;i<=b;i++)
 		{
-			tab+="\n"+a+"*"+i+"="+(a*i);
+			tab+="<br>"+a+"*"+i+"="+(a*i);
 		}
-		lbl.setText(tab);
+		lbl.setText("<html>"+tab+"</html>");
 		tab="";
 	}
 }
